@@ -8,6 +8,7 @@ function PropertyCard({ property }) {
         <img src={property.picture} alt={property.type} />
         <h2>{property.bedrooms} bedroom {property.type}</h2>
         <p>{property.description}</p>
+        <h3>{property.added.day}th of {property.added.month} {property.added.year}</h3>
         <h3>{property.location}</h3>
         <h3>£{property.price.toLocaleString()}</h3>
       </div>
