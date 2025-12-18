@@ -3,11 +3,14 @@
 function PropertyCard({ property }) {
     
   return (
-    <div className="property-card">
-      <img src={property.picture} alt={property.type} />
-      <h3>{property.type}</h3>
-      <p>{property.location}</p>
-      <p>£{property.price.toLocaleString()}</p>
+    <div className="propertycontainer">
+      <div className="propertyCard">
+        <img src={property.picture} alt={property.type} />
+        <h2>{property.type}</h2>
+        <p>{property.description}</p>
+        <h3>{property.location}</h3>
+        <h3>£{property.price.toLocaleString()}</h3>
+      </div>
     </div>
   );
 }
