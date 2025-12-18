@@ -99,7 +99,7 @@
         {
             "id": "prop7",
             "type": "Studio",
-            "bedrooms": 0,
+            "bedrooms": 1,
             "price": 199950,
             "tenure": "Leasehold",
             "description": "Compact studio flat ideal for commuters, located within walking distance of the station. Features a modern kitchenette and shower room.",
