@@ -33,6 +33,12 @@ p{
     padding: 20px;
 }
 
+.searchContainer form {
+    display: flex;
+    align-items: center;   
+    flex-wrap: wrap;
+}
+
 .propertyCard{
     border: solid black 5px;
     border-radius: 15px;
@@ -43,4 +49,9 @@ p{
     display: flex;
     flex-direction: column;
     padding: 20px;
+}
+
+.rw-widget{
+    width: 250px;
+    min-height: 38px;
 }
