@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { DatePicker, DropdownList } from "react-widgets";
 
 function SearchForm({ setFilters }) {
 
@@ -83,11 +84,12 @@ function SearchForm({ setFilters }) {
 
         <label className="searchLabel">
           Date added:
-          <input
-            type="date"
+          <DatePicker
             value={dateAdded}
-            onChange={e => setDateAdded(e.target.value)}
+            onChange={value => setDateAdded(value)}
+            placeholder="Select date"
           />
+
         </label>
 
         <button type="submit">Search</button>

@@ -32,7 +32,7 @@ function SearchPage() {
       const propertyDate = new Date(
         `${property.added.month} ${property.added.day}, ${property.added.year}`
       );
-      const filterDate = new Date(filters.dateAdded);
+      const filterDate = filters.dateAdded;
       if (propertyDate < filterDate) return false;
     }
 
