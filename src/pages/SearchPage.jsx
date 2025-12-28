@@ -41,7 +41,7 @@ function SearchPage() {
 
   return (
     <div>
-      <h1>Property Search</h1>
+      <h1>Property Search in Bromley</h1>
       <SearchForm setFilters={setFilters} />
       <PropertyList properties={filteredProperties} />
     </div>

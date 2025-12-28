@@ -4,7 +4,7 @@ import { DatePicker, DropdownList, NumberPicker, Combobox } from "react-widgets"
 function SearchForm({ setFilters }) {
 
   const [postcode, setPostcode] = useState("");
-  const postcodeOptions = ["BR1", "BR2", "BR3", "BR4", "BR5", "BR6"];
+  const postcodeOptions = ["BR1", "BR2", "BR3", "BR4", "BR5", "BR6","BR7","BR8"];
   const [minPrice, setMinPrice] = useState("");
   const [maxPrice, setMaxPrice] = useState("");
   const [bedrooms, setBedrooms] = useState("");
@@ -46,7 +46,7 @@ function SearchForm({ setFilters }) {
           <NumberPicker
             min={0}
             max={1000000}
-            step={50000}
+            step={25000}
             value={minPrice || 0}
             onChange={value => setMinPrice(value ?? "")}
           />
@@ -57,7 +57,7 @@ function SearchForm({ setFilters }) {
           <NumberPicker
             min={0}
             max={1000000}
-            step={50000}
+            step={25000}
             value={maxPrice || 0}
             onChange={value => setMaxPrice(value ?? "")}
           />
