@@ -1,9 +1,10 @@
 import { useState } from "react";
-import { DatePicker, DropdownList } from "react-widgets";
+import { DatePicker, DropdownList, NumberPicker, Combobox } from "react-widgets";
 
 function SearchForm({ setFilters }) {
 
   const [postcode, setPostcode] = useState("");
+  const postcodeOptions = ["BR1", "BR2", "BR3", "BR4", "BR5", "BR6"];
   const [minPrice, setMinPrice] = useState("");
   const [maxPrice, setMaxPrice] = useState("");
   const [bedrooms, setBedrooms] = useState("");
@@ -30,31 +31,38 @@ function SearchForm({ setFilters }) {
       <form onSubmit={handleSubmit}>
 
         <label className="searchLabel">
-          Postcode:
-          <input
-            type="text"
+          Postcode Area:
+          <Combobox
+            data={postcodeOptions}
             value={postcode}
-            onChange={e => setPostcode(e.target.value)}
+            onChange={value => setPostcode(value)}
+            placeholder="e.g. BR5"
           />
         </label>
 
+
         <label className="searchLabel">
           Minimum Price:
-          <input
-            type="number"
-            value={minPrice}
-            onChange={e => setMinPrice(e.target.value)}
+          <NumberPicker
+            min={0}
+            max={1000000}
+            step={50000}
+            value={minPrice || 0}
+            onChange={value => setMinPrice(value ?? "")}
           />
         </label>
 
         <label className="searchLabel">
           Maximum Price:
-          <input
-            type="number"
-            value={maxPrice}
-            onChange={e => setMaxPrice(e.target.value)}
+          <NumberPicker
+            min={0}
+            max={1000000}
+            step={50000}
+            value={maxPrice || 0}
+            onChange={value => setMaxPrice(value ?? "")}
           />
         </label>
+
 
         <label className="searchLabel">
           Number of Bedrooms:
