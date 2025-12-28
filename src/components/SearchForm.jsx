@@ -58,29 +58,23 @@ function SearchForm({ setFilters }) {
 
         <label className="searchLabel">
           Number of Bedrooms:
-          <select
-            value={bedrooms}
-            onChange={e => setBedrooms(e.target.value)}
-          >
-            <option value="">Any</option>
-            <option value="1">One</option>
-            <option value="2">Two</option>
-            <option value="3">Three</option>
-            <option value="4">Four</option>
-          </select>
+          <DropdownList
+            data={["Any", 1, 2, 3, 4]}
+            value={bedrooms || "Any"}
+            onChange={value => setBedrooms(value === "Any" ? "" : value)}
+          />
         </label>
 
+
         <label className="searchLabel">
-          Property Type:
-          <select
-            value={type}
-            onChange={e => setType(e.target.value)}
-          >
-            <option value="">Any</option>
-            <option value="House">House</option>
-            <option value="Flat">Flat</option>
-          </select>
-        </label>
+  Property Type:
+  <DropdownList
+    data={["Any", "House", "Flat", "Bungalow", "Apartment", "Studio"]}
+    value={type || "Any"}
+    onChange={value => setType(value === "Any" ? "" : value)}
+  />
+</label>
+
 
         <label className="searchLabel">
           Date added:
