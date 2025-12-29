@@ -1,60 +1,156 @@
 body{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
-    background-color: rgb(195, 228, 241);
-    color: rgb(0, 0, 0);
+    background-color: rgba(195, 228, 241,1 );
+    color: rgba(0, 0, 0,1 );
+    margin: 0;
 }
 
 h1{
-    font-size: 3em;
+  font-size: 3em;
 }
 
 h2{
-    font-size: 2em;
+  font-size: 2em;
 }
 
 h3{
-    font-size: 1.5em;
+  font-size: 1.5em;
 }
 
 p{
-    font-size: 1em;
+  font-size: 1em;
 }
 
 .searchLabel{
-    padding: 15px;
-    font-size: 1em;
-    min-width: 180px;
+  padding: 15px;
+  font-size: 1em;
+  min-width: 180px;
 }
 
 .searchContainer{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px;
+  /* width: 100%; */
 }
 
 .searchContainer form {
-    display: flex;
-    align-items: center;   
-    flex-wrap: wrap;
+  display: flex;
+  align-items: center;   
+  flex-wrap: wrap;
+}
+
+.formButton {
+  font-family: inherit;
+  font-size: 1em;
+  padding: 6px 12px;
+  height: 38px;
+  background-color: rgba(255, 255, 255, 1);
+  color: rgba(51,51,51,1);
+  border: 1px solid rgba(204, 204, 204,1);
+  border-radius: 4px;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.formButton:hover{
+  background-color: rgb(233, 236, 239);
+}
+
+.filtersTitle {
+  font-size: 2em;
 }
 
 .propertyCard{
-    border: solid black 5px;
-    border-radius: 15px;
-    padding: 20px;
+  border: solid white 5px;
+  border-radius: 15px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.4);
 }
 
 .propertycontainer{
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 20px;
 }
 
-.rw-widget{
-    min-height: 38px;
-    width: 100%;
+.buttonRow {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75em;
+  padding-bottom: 20px;      
+}
+
+.pageLayout {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 25px;
+  padding: 10px;
+  min-height: 100vh;
+  align-items: stretch;
+}
+
+.sidebar {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.4);
+  border: solid white 5px;
+  padding: 1em;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.resultsArea {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+}
+
+.sidebar .searchContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;   
+  flex: 1;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+.sidebar .searchContainer form {
+  flex-direction: column;
+  align-items: stretch;
+  height: 100%;
+  width: 100%;
+}
+
+.sidebar .rw-widget {
+  min-height: 30px;
+  font-size: 0.9em;
+}
+
+.sidebar .rw-input{
+  height: 30px;
+  font-size: 1em;
+}
+
+.sidebar .searchLabel {
+  margin-bottom: 0.5em;
+}
+
+.sidebar .formButton{
+  height: 32px;
+  font-size: 1em;
+  padding: 4px 8px;
+}
+
+.titleBar{
+  background-color: rgba(255, 255, 255, 0.4);
+  margin-top: auto;
+  padding: 20px;
 }
 
 @media (max-width: 1032px) {

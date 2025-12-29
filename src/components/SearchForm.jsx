@@ -24,11 +24,30 @@ function SearchForm({ setFilters }) {
     });
   }
 
+  function handleReset() {
+    setPostcode("");
+    setMinPrice("");
+    setMaxPrice("");
+    setBedrooms("");
+    setType("");
+    setDateAdded("");
+    
+    setFilters({
+      postcode: "",
+      minPrice: "",
+      maxPrice: "",
+      bedrooms: "",
+      type: "",
+      dateAdded: ""
+    });
+  }
+
   return (
     <div className="searchContainer">
-      <h2>Filters:</h2>
 
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} onReset={handleReset}>
+
+        <h2 className="filtersTitle">Filters</h2>
 
         <label className="searchLabel">
           Postcode Area:
@@ -75,13 +94,13 @@ function SearchForm({ setFilters }) {
 
 
         <label className="searchLabel">
-  Property Type:
-  <DropdownList
-    data={["Any", "House", "Flat", "Bungalow", "Apartment", "Studio"]}
-    value={type || "Any"}
-    onChange={value => setType(value === "Any" ? "" : value)}
-  />
-</label>
+          Property Type:
+          <DropdownList
+            data={["Any", "House", "Flat", "Bungalow", "Apartment", "Studio"]}
+            value={type || "Any"}
+            onChange={value => setType(value === "Any" ? "" : value)}
+          />
+        </label>
 
 
         <label className="searchLabel">
@@ -93,9 +112,11 @@ function SearchForm({ setFilters }) {
           />
 
         </label>
+        <div className="buttonRow">
+          <button className="formButton" type="submit">Search</button>
 
-        <button type="submit">Search</button>
-
+          <button className="formButton" type="reset">Reset</button>
+        </div>
       </form>
     </div>
   );
