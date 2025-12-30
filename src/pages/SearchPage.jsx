@@ -1,11 +1,16 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import propertiesData from "../data/properties.json";
 import SearchForm from "../components/SearchForm";
 import PropertyList from "../components/PropertyList";
+import FavouritesList from "../components/FavouritesList";
+
 
 function SearchPage() {
 
   const allProperties = propertiesData.properties;
+
+  
+
 
   const [filters, setFilters] = useState({
     postcode: "",
@@ -38,6 +43,47 @@ function SearchPage() {
 
     return true;
   });
+  
+  const [favourites, setFavourites] = useState([]);
+  
+  useEffect(() => {
+    const saved = JSON.parse(localStorage.getItem("favourites")) || [];
+    setFavourites(saved);
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem("favourites", JSON.stringify(favourites));
+  }, [favourites]);
+
+function toggleFavourite(property) {
+  setFavourites(prev =>
+    prev.find(p => p.id === property.id)
+      ? prev.filter(p => p.id !== property.id)
+      : [...prev, property]
+  );
+}
+
+function removeFavourite(propertyId) {
+  setFavourites(prev =>
+    prev.filter(property => property.id !== propertyId)
+  );
+}
+
+function handleDrop(e) {
+  e.preventDefault();
+  const property = JSON.parse(e.dataTransfer.getData("property"));
+
+  setFavourites(prev =>
+    prev.find(p => p.id === property.id)
+      ? prev
+      : [...prev, property]
+  );
+}
+
+function allowDrop(e) {
+  e.preventDefault();
+}
+
 
   return (
     <div>
@@ -45,11 +91,17 @@ function SearchPage() {
 
       <div className="pageLayout">
         <aside className="sidebar">
-          <SearchForm setFilters={setFilters} />
+
+          <div className="searchContainer">
+            <SearchForm setFilters={setFilters} />
+          </div>
+
+          <FavouritesList favourites={favourites} allowDrop={allowDrop} handleDrop={handleDrop} removeFavourite={removeFavourite}/>
+
         </aside>
 
         <main className="resultsArea">
-          <PropertyList properties={filteredProperties} />
+          <PropertyList properties={filteredProperties} favourites={favourites} toggleFavourite={toggleFavourite}/>
         </main>
       </div>
     </div>

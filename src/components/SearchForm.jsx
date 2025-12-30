@@ -43,7 +43,6 @@ function SearchForm({ setFilters }) {
   }
 
   return (
-    <div className="searchContainer">
 
       <form onSubmit={handleSubmit} onReset={handleReset}>
 
@@ -118,7 +117,6 @@ function SearchForm({ setFilters }) {
           <button className="formButton" type="reset">Reset</button>
         </div>
       </form>
-    </div>
   );
 }
 
