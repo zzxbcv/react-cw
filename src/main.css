@@ -153,28 +153,9 @@ p{
   padding: 20px;
 }
 
-@media (max-width: 1032px) {
-  .searchContainer form {
-    justify-content: center;
+/* @media (max-width: 450px) {
+  .titleBar{
+    font-size: 1.8em;
   }
-
-  .searchLabel {
-    min-width: 45%;
-  }
-}
-
-@media (max-width: 777apx) {
-  .searchContainer form {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .searchLabel {
-    width: 100%;
-  }
-
-  .searchContainer button {
-    width: 100%;
-  }
-}
+} */
 
