@@ -47,6 +47,8 @@ p{
   padding: 10px;
   font-size: 1em;
   min-width: 180px;
+  flex-direction: column;
+  display: flex;
 }
 
 .searchContainer{
@@ -90,7 +92,7 @@ p{
   display: flex;
   flex-direction: column;
   gap: 0.75em;
-  padding-bottom: 20px;      
+  padding-bottom: 10px;      
 }
 
 .pageLayout {

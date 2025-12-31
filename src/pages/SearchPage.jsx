@@ -4,13 +4,8 @@ import SearchForm from "../components/SearchForm";
 import PropertyList from "../components/PropertyList";
 import FavouritesList from "../components/FavouritesList";
 
-
 function SearchPage() {
-
   const allProperties = propertiesData.properties;
-
-  
-
 
   const [filters, setFilters] = useState({
     postcode: "",
@@ -21,7 +16,31 @@ function SearchPage() {
     dateAdded: ""
   });
 
+  const [favourites, setFavourites] = useState([]);
+  const [showFavouritesOnly, setShowFavouritesOnly] = useState(false);
+
+  /* ----------------- FAVOURITES PERSISTENCE ----------------- */
+  useEffect(() => {
+    const saved = JSON.parse(localStorage.getItem("favourites")) || [];
+    setFavourites(saved);
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem("favourites", JSON.stringify(favourites));
+  }, [favourites]);
+
+  /* ----------------- FILTER HANDLER ----------------- */
+  function handleSetFilters(newFilters) {
+    setFilters(newFilters);
+    setShowFavouritesOnly(false); // exit favourites-only mode
+  }
+
+  /* ----------------- PROPERTY FILTERING ----------------- */
   const filteredProperties = allProperties.filter(property => {
+
+    if (showFavouritesOnly) {
+      return favourites.some(fav => fav.id === property.id);
+    }
 
     if (filters.type && property.type !== filters.type) return false;
     if (filters.minPrice && property.price < Number(filters.minPrice)) return false;
@@ -37,53 +56,36 @@ function SearchPage() {
       const propertyDate = new Date(
         `${property.added.month} ${property.added.day}, ${property.added.year}`
       );
-      const filterDate = filters.dateAdded;
-      if (propertyDate < filterDate) return false;
+      if (propertyDate < filters.dateAdded) return false;
     }
 
     return true;
   });
-  
-  const [favourites, setFavourites] = useState([]);
-  
-  useEffect(() => {
-    const saved = JSON.parse(localStorage.getItem("favourites")) || [];
-    setFavourites(saved);
-  }, []);
 
-  useEffect(() => {
-    localStorage.setItem("favourites", JSON.stringify(favourites));
-  }, [favourites]);
+  function toggleFavourite(property) {
+    setFavourites(prev =>
+      prev.find(p => p.id === property.id)
+        ? prev.filter(p => p.id !== property.id)
+        : [...prev, property]
+    );
+  }
 
-function toggleFavourite(property) {
-  setFavourites(prev =>
-    prev.find(p => p.id === property.id)
-      ? prev.filter(p => p.id !== property.id)
-      : [...prev, property]
-  );
-}
+  function removeFavourite(propertyId) {
+    setFavourites(prev => prev.filter(p => p.id !== propertyId));
+  }
 
-function removeFavourite(propertyId) {
-  setFavourites(prev =>
-    prev.filter(property => property.id !== propertyId)
-  );
-}
+  function handleDrop(e) {
+    e.preventDefault();
+    const property = JSON.parse(e.dataTransfer.getData("property"));
 
-function handleDrop(e) {
-  e.preventDefault();
-  const property = JSON.parse(e.dataTransfer.getData("property"));
+    setFavourites(prev =>
+      prev.find(p => p.id === property.id) ? prev : [...prev, property]
+    );
+  }
 
-  setFavourites(prev =>
-    prev.find(p => p.id === property.id)
-      ? prev
-      : [...prev, property]
-  );
-}
-
-function allowDrop(e) {
-  e.preventDefault();
-}
-
+  function allowDrop(e) {
+    e.preventDefault();
+  }
 
   return (
     <div>
@@ -91,15 +93,10 @@ function allowDrop(e) {
 
       <div className="pageLayout">
         <aside className="sidebar">
-
-          <div className="searchContainer">
-            <SearchForm setFilters={setFilters} />
-          </div>
-
+          <SearchForm setFilters={handleSetFilters} showFavouritesOnly={showFavouritesOnly} setShowFavouritesOnly={setShowFavouritesOnly}/>
           <FavouritesList favourites={favourites} allowDrop={allowDrop} handleDrop={handleDrop} removeFavourite={removeFavourite}/>
-
         </aside>
-
+        
         <main className="resultsArea">
           <PropertyList properties={filteredProperties} favourites={favourites} toggleFavourite={toggleFavourite}/>
         </main>
