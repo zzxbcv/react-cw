@@ -1,7 +1,13 @@
 import { useState } from "react";
 import { DatePicker, DropdownList, NumberPicker, Combobox } from "react-widgets";
 
-function SearchForm({setFilters, showFavouritesOnly, setShowFavouritesOnly}) {
+function SearchForm({
+  setFilters,
+  showFavouritesOnly,
+  setShowFavouritesOnly,
+  openSidebar,
+  closeSidebar
+}) {
 
   const [postcode, setPostcode] = useState("");
   const postcodeOptions = ["BR1", "BR2", "BR3", "BR4", "BR5", "BR6", "BR7", "BR8"];
@@ -22,6 +28,8 @@ function SearchForm({setFilters, showFavouritesOnly, setShowFavouritesOnly}) {
       type,
       dateAdded
     });
+
+    if (closeSidebar) closeSidebar();
   }
 
   function handleReset() {
@@ -42,13 +50,24 @@ function SearchForm({setFilters, showFavouritesOnly, setShowFavouritesOnly}) {
     });
 
     setShowFavouritesOnly(false);
-
+    closeSidebar();
   }
 
   return (
     <form onSubmit={handleSubmit} onReset={handleReset}>
 
-      <h2 className="filtersTitle">Filters</h2>
+      <div className="filtersHeader">
+        <h2 className="filtersTitle">Filters</h2>
+
+        <button
+          type="button"
+          className="closeSidebar"
+          onClick={closeSidebar}
+          aria-label="Close filters"
+        >
+          ✕
+        </button>
+      </div>
 
       <label className="searchLabel">
         Postcode Area:
@@ -112,6 +131,7 @@ function SearchForm({setFilters, showFavouritesOnly, setShowFavouritesOnly}) {
       <div className="buttonRow">
         <button className="formButton" type="submit">Search</button>
         <button className="formButton" type="reset">Reset</button>
+
         <button
           type="button"
           className={`formButton ${showFavouritesOnly ? "active" : ""}`}

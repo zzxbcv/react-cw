@@ -16,10 +16,10 @@ function SearchPage() {
     dateAdded: ""
   });
 
+  const [sidebarOpen, setSidebarOpen] = useState(false);
   const [favourites, setFavourites] = useState([]);
   const [showFavouritesOnly, setShowFavouritesOnly] = useState(false);
 
-  /* ----------------- FAVOURITES PERSISTENCE ----------------- */
   useEffect(() => {
     const saved = JSON.parse(localStorage.getItem("favourites")) || [];
     setFavourites(saved);
@@ -29,15 +29,12 @@ function SearchPage() {
     localStorage.setItem("favourites", JSON.stringify(favourites));
   }, [favourites]);
 
-  /* ----------------- FILTER HANDLER ----------------- */
   function handleSetFilters(newFilters) {
     setFilters(newFilters);
-    setShowFavouritesOnly(false); // exit favourites-only mode
+    setShowFavouritesOnly(false);
   }
 
-  /* ----------------- PROPERTY FILTERING ----------------- */
   const filteredProperties = allProperties.filter(property => {
-
     if (showFavouritesOnly) {
       return favourites.some(fav => fav.id === property.id);
     }
@@ -77,7 +74,6 @@ function SearchPage() {
   function handleDrop(e) {
     e.preventDefault();
     const property = JSON.parse(e.dataTransfer.getData("property"));
-
     setFavourites(prev =>
       prev.find(p => p.id === property.id) ? prev : [...prev, property]
     );
@@ -91,12 +87,24 @@ function SearchPage() {
     <div>
       <h1 className="titleBar">Property Search in Bromley</h1>
 
+      <button
+        className="hamburgerButton"
+        onClick={() => setSidebarOpen(true)}
+        aria-label="Open filters"
+      >
+        ☰ Filters
+      </button>
+
       <div className="pageLayout">
-        <aside className="sidebar">
-          <SearchForm setFilters={handleSetFilters} showFavouritesOnly={showFavouritesOnly} setShowFavouritesOnly={setShowFavouritesOnly}/>
+        <aside className={`sidebar ${sidebarOpen ? "open" : ""}`}>
+          <SearchForm setFilters={handleSetFilters} showFavouritesOnly={showFavouritesOnly} setShowFavouritesOnly={setShowFavouritesOnly} openSidebar={() => setSidebarOpen(true)} closeSidebar={() => setSidebarOpen(false)}/>
           <FavouritesList favourites={favourites} allowDrop={allowDrop} handleDrop={handleDrop} removeFavourite={removeFavourite}/>
         </aside>
-        
+
+        {sidebarOpen && (
+          <div className="sidebarOverlay"onClick={() => setSidebarOpen(false)}/>
+        )}
+
         <main className="resultsArea">
           <PropertyList properties={filteredProperties} favourites={favourites} toggleFavourite={toggleFavourite}/>
         </main>
