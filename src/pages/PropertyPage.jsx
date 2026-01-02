@@ -12,6 +12,11 @@ function PropertyPage() {
     p => p.id === id
   );
 
+  if (!property) {
+  return <p>Property not found</p>;
+  }
+
+
   const [mainImage, setMainImage] = useState(property.pictures[0]);
 
   const encodedAddress = encodeURIComponent(property.location);
@@ -25,7 +30,7 @@ function PropertyPage() {
       <div className="propertyPageContainer">
        
         <div className="gallery">
-          <img src={mainImage} alt={property.type} className="propertyImage" />
+          <img src={mainImage} alt={property.type} className="galleryImage" />
 
           <div className="thumbnails">
             {property.pictures.map((img, index) => (

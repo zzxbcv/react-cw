@@ -34,7 +34,7 @@ function PropertyCard({ property, favourites = [], toggleFavourite }) {
         <Link to={`/property/${property.id}`} className="propertyLink">
           <h3>{property.location}</h3>
 
-          <img src={property.picture} alt={property.type} className="propertyImage" />
+          <img src={property.pictures[0]} alt={property.type} className="propertyImage" />
 
           <h2>{property.bedrooms} bedroom {property.type}</h2>
 

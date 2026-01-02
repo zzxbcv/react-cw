@@ -10,7 +10,7 @@ function SearchForm({
 }) {
 
   const [postcode, setPostcode] = useState("");
-  const postcodeOptions = ["BR1", "BR2", "BR3", "BR4", "BR5", "BR6", "BR7", "BR8"];
+  const postcodeOptions = ["KT22", "NW9", "NW7", "SW11", "EN1", "SW4", "IG8"];
   const [minPrice, setMinPrice] = useState("");
   const [maxPrice, setMaxPrice] = useState("");
   const [bedrooms, setBedrooms] = useState("");
@@ -75,7 +75,7 @@ function SearchForm({
           data={postcodeOptions}
           value={postcode}
           onChange={value => setPostcode(value)}
-          placeholder="e.g. BR5"
+          placeholder="e.g. SW11"
         />
       </label>
 
