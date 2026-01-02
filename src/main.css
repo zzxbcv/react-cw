@@ -45,7 +45,7 @@ p{
   margin: 0 50px 20px 50px;
   border: 5px solid rgba(255, 255, 255, 1);
   border-radius: 15px;
-  
+
 }
 
 .propertyCard {
@@ -337,20 +337,22 @@ p{
 
 .gallery {
   margin-bottom: 20px;
+  flex: 1;
 }
 
 .galleryImage{
   height: auto;
-  width: 680px;
+  width: 100%;
   border-radius: 15px;
   border: 5px solid rgba(255, 255, 255, 1);
-  margin: 20px;
+  /* margin: 20px; */
 }
 
 .thumbnails {
   display: flex;
   gap: 10px;
   margin-top: 10px;
+  overflow-x: auto;
 }
 
 .thumbnail {
@@ -360,12 +362,7 @@ p{
   cursor: pointer;
   opacity: 0.6;
   border: 2px solid transparent;
-}
-
-.thumbnailRow {
-  display: flex;
-  gap: 10px;
-  margin-top: 10px;
+  flex-shrink: 0;
 }
 
 .thumbnail.active {
@@ -382,6 +379,10 @@ p{
   border: none;
 }
 
+.react-tabs{
+  flex: 1;
+}
+
 .noResults {
   text-align: center;
   margin-top: 2em;
@@ -393,11 +394,18 @@ p{
   .propertyImage{
     width: 590px;
   }
+  .propertyLocation{
+    font-size: 2.5em;
+    text-align: center;
+  }
 }
 
 @media (max-width: 1025px){
   .propertyImage{
     width: 490px;
+  }
+  .propertyLocation{
+    font-size: 2.25em;
   }
 }
 
@@ -410,6 +418,9 @@ p{
 @media (max-width: 825px){
   .propertyImage{
     width: 290px;
+  }
+  .propertyLocation{
+    font-size: 2.25em;
   }
 }
 
@@ -471,6 +482,12 @@ p{
   }
 }
 
+@media (max-width: 725px){
+  .propertyLocation{
+    font-size: 2em;
+  }
+}
+
 @media (max-width: 690px){
   .titleBar{
     font-size: 2.5em;
@@ -487,6 +504,9 @@ p{
   .titleBar{
     font-size: 2.3em;
   }
+  .propertyLocation{
+    font-size: 1.5em;
+  }
 }
 
 @media (max-width: 540px){
@@ -502,11 +522,17 @@ p{
   .titleBar{
     font-size: 1.89em;
   }
+  .propertyPageContainer{
+    margin: 10px;
+  }
 }
 
 @media (max-width: 440px){
   .propertyImage{
     width: 320px;
+  }
+  .propertyLocation{
+    font-size: 1.25em;
   }
 }
 
