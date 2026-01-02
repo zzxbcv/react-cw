@@ -382,6 +382,12 @@ p{
   border: none;
 }
 
+.noResults {
+  text-align: center;
+  margin-top: 2em;
+  font-size: 1.2em;
+  color: #666;
+}
 
 @media (max-width: 1135px){
   .propertyImage{

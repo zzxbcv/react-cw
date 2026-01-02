@@ -109,8 +109,17 @@ function SearchPage() {
         )}
 
         <main className="resultsArea">
-          <PropertyList properties={filteredProperties} favourites={favourites} toggleFavourite={toggleFavourite}/>
+          {filteredProperties.length === 0 ? (
+            <p className="noResults">No properties found</p>
+          ) : (
+            <PropertyList
+              properties={filteredProperties}
+              favourites={favourites}
+              toggleFavourite={toggleFavourite}
+            />
+          )}
         </main>
+
       </div>
     </div>
   );
