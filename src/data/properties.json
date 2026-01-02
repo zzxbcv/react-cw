@@ -9,15 +9,15 @@
         "description": "This delightful 1930's semi-detached house is situated in a sought after residential road just a short walk from both Fetcham Village and local schools.\n\nThis lovely family home is well presented throughout and enjoys a fabulous large garden to the rear and ample off road parking to the front.\n\nInside the property offers a welcoming entrance hall with a useful under stairs cupboard. There are two reception rooms, to the front of the property there is a lovely sitting room with a log burning stove. The dining room is a good size and opens to the superb fitted kitchen with painted cabinets, polished tiled floor and views over the rear garden.\n\nThe ground floor bathroom is modern and fully tiled. Upstairs there are two double bedrooms (both with fitted wardrobes) and a single bedroom.\n\nOutside, a neatly landscaped frontage incorporates a gravel driveway with brick edging and gated side access leading to a rear garden approximately 100 feet in length.",
         "location": "The Street, Fetcham, Leatherhead, Surrey KT22",
         "pictures": [
-            "/images/prop1/img1.jpeg",
-            "/images/prop1/img2.jpeg",
-            "/images/prop1/img3.jpeg",
-            "/images/prop1/img4.jpeg",
-            "/images/prop1/img5.jpeg",
-            "/images/prop1/img6.jpeg",
-            "/images/prop1/img7.jpeg"
+            "images/prop1/img1.jpeg",
+            "images/prop1/img2.jpeg",
+            "images/prop1/img3.jpeg",
+            "images/prop1/img4.jpeg",
+            "images/prop1/img5.jpeg",
+            "images/prop1/img6.jpeg",
+            "images/prop1/img7.jpeg"
         ],
-        "floorPlan": "/images/prop1/floorPlan.png",
+        "floorPlan": "images/prop1/floorPlan.png",
         "url": "properties/prop1.html",
         "added": {
             "month": "October",
@@ -34,15 +34,15 @@
 			"description":"Spanning an impressive 823 square feet (approx.) is this well presented two bedroom, two bathroom, second floor apartment. The apartment offers bright accommodation throughout with its far reaching south-facing aspect. Featuring a closed off kitchen with integrated appliances and stylish tiling, spacious living room with wood effect flooring and access to a large private balcony overlooking the established local allotment, two double bedrooms each benefiting from direct bathroom access and ample room for storage. The contemporary bathroom and ensuite benefit from fully tiled floor and walls, and heated towel rails. Further benefits include assigned underground car parking space, lift access, communal gardens for residents and no onward chain.\n\nThe Edition development which was the former British Newspaper Library site in Colindale is directly opposite Colindale tube station, connecting you to London Euston on the Northern Line within 21 minutes (approx.). Residents will also be moments away from gyms, cafés, restaurants, Ofsted rated ‘Outstanding schools, and other transport links: for example Bus 186 taking you to Brent Cross shopping mall in 11 minutes (approx.)",
 			"location":"Observer Close, Colindale NW9",
 			"pictures": [
-                "/images/prop2/img1.jpeg",
-                "/images/prop2/img2.jpeg",
-                "/images/prop2/img3.jpeg",
-                "/images/prop2/img4.jpeg",
-                "/images/prop2/img5.jpeg",
-                "/images/prop2/img6.jpeg",
-                "/images/prop2/img7.jpeg"
+                "images/prop2/img1.jpeg",
+                "images/prop2/img2.jpeg",
+                "images/prop2/img3.jpeg",
+                "images/prop2/img4.jpeg",
+                "images/prop2/img5.jpeg",
+                "images/prop2/img6.jpeg",
+                "images/prop2/img7.jpeg"
             ],
-            "floorPlan": "/images/prop2/floorPlan.png",
+            "floorPlan": "images/prop2/floorPlan.png",
 			"url":"properties/prop2.html",
             "added": {
                 "month":"September",
@@ -59,15 +59,15 @@
             "description": "The Property Shop is delighted to present this rare opportunity to acquire a beautifully maintained two-bedroom semi-detached bungalow, set within the peaceful and sought-after Chalet Estate in Mill Hill. Exclusively for the over 55s, this charming home features two generously sized bedrooms, a spacious reception room, a large integrated kitchen, and a modern family bathroom. The property benefits from high ceilings, double glazing, and both front and rear communal gardens, along with a privately reserved parking bay. Ideally located just off Hammers Lane, it offers easy access to Mill Hill Broadway's array of shops, restaurants, and transport links, while being moments from Mill Hill Park, Arrandene Open Space, and directly opposite the local community centre. Call now to arrange a viewing.",
             "location": "Chalet Estate Hammers Lane, London NW7",
             "pictures": [
-                "/images/prop3/img1.jpeg",
-                "/images/prop3/img2.jpeg",
-                "/images/prop3/img3.jpeg",
-                "/images/prop3/img4.jpeg",
-                "/images/prop3/img5.jpeg",
-                "/images/prop3/img6.jpeg",
-                "/images/prop3/img7.jpeg"
+                "images/prop3/img1.jpeg",
+                "images/prop3/img2.jpeg",
+                "images/prop3/img3.jpeg",
+                "images/prop3/img4.jpeg",
+                "images/prop3/img5.jpeg",
+                "images/prop3/img6.jpeg",
+                "images/prop3/img7.jpeg"
             ],
-            "floorPlan": "/images/prop3/floorPlan.png",
+            "floorPlan": "images/prop3/floorPlan.png",
             "url": "properties/prop3.html",
             "added": {
                 "month": "November",
@@ -84,14 +84,14 @@
             "description": "A gem of an apartment in the hugely popular and exclusive Halliday House. \n\n Totalling almost 700sqft it is flooded with natural light and has evenly proportioned rooms with an open plan kitchen living room, a large bedroom and plenty of storage. Each room opens out onto its exceptionally large winter garden – a versatile space that attracts all the afternoon sun and has open west-facing views. \n\nWith a potential rental yield of over 5.5% this presents an exciting investment opportunity, and having only had one owner and never been rented out the apartment is in immaculate condition. \n\nResidents of Halliday House have the added benefit of a communal roof terrace, as well as a plethora of onsite amenities including gym, swimming pool & spa, residents’ lounges, screening room, WFH space and a communal garden. \n\nThe apartment comes with a large storage cage. \n\nThe apartment is situated in the heart of Battersea’s buzzing neighbourhood, with 450m of river frontage, a riverside park, and dozens of shops, restaurants, bars and leisure activities. It is also well connected with Battersea’s brand new tube station less than a 5 minute walk away allowing access to the west end and the city within 15 minutes. ",
             "location": "2 Circus Road West, Battersea SW11",
             "pictures":  [
-                "/images/prop4/img1.jpeg",
-                "/images/prop4/img2.jpeg",
-                "/images/prop4/img3.jpeg",
-                "/images/prop4/img4.jpeg",
-                "/images/prop4/img5.jpeg",
-                "/images/prop4/img6.jpeg"
+                "images/prop4/img1.jpeg",
+                "images/prop4/img2.jpeg",
+                "images/prop4/img3.jpeg",
+                "images/prop4/img4.jpeg",
+                "images/prop4/img5.jpeg",
+                "images/prop4/img6.jpeg"
             ],
-            "floorPlan": "/images/prop4/floorPlan.png",
+            "floorPlan": "images/prop4/floorPlan.png",
             "url": "properties/prop4.html",
             "added": {
                 "month": "January",
@@ -108,15 +108,15 @@
             "description": "Barnfields introduce this truly outstanding detached four bedroom (all doubles) house in one of Enfields most desirable and elegant tree lined turnings within the Bush Hill Park Conservation Area, backing onto private tennis courts within level walking distance of Bush Hill Park Rail Station (Liverpool Street Line) and Enfield Town multiple shopping centre. Good schools are also close at hand. \n\nThe spacious accommodation has been remodelled and refitted to an exceptional standard by the present owners and has many pleasing features.",
             "location": "Wellington Road, Enfield EN1",
             "pictures":  [
-                "/images/prop5/img1.jpeg",
-                "/images/prop5/img2.jpeg",
-                "/images/prop5/img3.jpeg",
-                "/images/prop5/img4.jpeg",
-                "/images/prop5/img5.jpeg",
-                "/images/prop5/img6.jpeg",
-                "/images/prop5/img7.jpeg"
+                "images/prop5/img1.jpeg",
+                "images/prop5/img2.jpeg",
+                "images/prop5/img3.jpeg",
+                "images/prop5/img4.jpeg",
+                "images/prop5/img5.jpeg",
+                "images/prop5/img6.jpeg",
+                "images/prop5/img7.jpeg"
             ],
-            "floorPlan": "/images/prop5/floorPlan.png",
+            "floorPlan": "images/prop5/floorPlan.png",
             "url": "properties/prop5.html",
             "added": {
                 "month": "March",
@@ -133,14 +133,14 @@
             "description": "This contemporary collection of newly built one, two and three bedroom SO Resi apartments is set in the village-like \n\nneighbourhood of Clapham Park, with easy access to the sparkling style of Clapham, Brixton and Balham. \n\nIn a visionary new development with an abundance of open green space, tree-lined avenues, safe leafy paths for walking and cycling, and a great social vibe, these sophisticated modern homes are part of a vibrant, inclusive community - all just a short distance from central London. \n\nEach light-filled apartment in this welcoming corner of London has been finished to exacting standards to create the perfect city retreat, with airy interiors, plenty of indoor and outdoor space and everything else you need to live life your way.",
             "location": "1 Mullins Place, London, SW4",
             "pictures": [
-                "/images/prop6/img1.png",
-                "/images/prop6/img2.png",
-                "/images/prop6/img3.png",
-                "/images/prop6/img4.png",
-                "/images/prop6/img5.png",
-                "/images/prop6/img6.png"
+                "images/prop6/img1.png",
+                "images/prop6/img2.png",
+                "images/prop6/img3.png",
+                "images/prop6/img4.png",
+                "images/prop6/img5.png",
+                "images/prop6/img6.png"
             ],
-            "floorPlan": "/images/prop6/floorPlan.png",
+            "floorPlan": "images/prop6/floorPlan.png",
             "url": "properties/prop6.html",
             "added": {
                 "month": "June",
@@ -157,14 +157,14 @@
             "description": "Beautifully positioned within an elegant Edwardian conversion, this studio flat offers an inviting option for anyone seeking convenience and connectivity in a well-established area. With South Woodford tube station within easy reach, journeys into the city feel pleasantly straightforward, allowing daily routines to flow with ease. Epping Forest is also close by, giving effortless access to expansive woodland for time spent outdoors. A range of shops and everyday amenities sit nearby too, creating a setting that feels both practical and welcoming. Offered chain-free, the property provides a smooth route to ownership in a location that balances urban access with green surroundings.",
             "location": "High Road, Woodford Green IG8",
             "pictures": [
-                "/images/prop7/img1.jpeg",
-                "/images/prop7/img2.jpeg",
-                "/images/prop7/img3.jpeg",
-                "/images/prop7/img4.jpeg",
-                "/images/prop7/img5.jpeg",
-                "/images/prop7/img6.jpeg"
+                "images/prop7/img1.jpeg",
+                "images/prop7/img2.jpeg",
+                "images/prop7/img3.jpeg",
+                "images/prop7/img4.jpeg",
+                "images/prop7/img5.jpeg",
+                "images/prop7/img6.jpeg"
             ],
-            "floorPlan": "/images/prop7/floorPlan.png",
+            "floorPlan": "images/prop7/floorPlan.png",
             "url": "properties/prop7.html",
             "added": {
                 "month": "August",
