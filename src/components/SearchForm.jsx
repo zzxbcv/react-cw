@@ -5,7 +5,6 @@ function SearchForm({
   setFilters,
   showFavouritesOnly,
   setShowFavouritesOnly,
-  openSidebar,
   closeSidebar
 }) {
 

@@ -104,9 +104,7 @@ function SearchPage() {
           <FavouritesList favourites={favourites} allowDrop={allowDrop} handleDrop={handleDrop} removeFavourite={removeFavourite}/>
         </aside>
 
-        {sidebarOpen && (
-          <div className="sidebarOverlay"onClick={() => setSidebarOpen(false)}/>
-        )}
+        
 
         <main className="resultsArea">
           {filteredProperties.length === 0 ? (
