@@ -85,6 +85,7 @@ function SearchPage() {
 
   return (
     <div>
+      <title>Search page</title>
       <h1 className="titleBar">Property Search in Bromley</h1>
 
       <button

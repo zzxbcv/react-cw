@@ -2,7 +2,7 @@ import PropertyCard from "./PropertyCard";
 
 function PropertyList({ properties, favourites, toggleFavourite }) {
   return (
-    <div className="propertycontainer">
+    <div className="propertyContainer">
       {properties.map(property => (
         <PropertyCard key={property.id} property={property} favourites={favourites} toggleFavourite={toggleFavourite}/>
       ))}

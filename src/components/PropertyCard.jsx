@@ -1,9 +1,9 @@
-
+import { Link } from "react-router-dom";
 
 function PropertyCard({ property, favourites = [], toggleFavourite }) {
   return (
     <div
-      className="propertycontainer"
+      className="propertyContainer"
       draggable
       onDragStart={e => {
         e.dataTransfer.setData(
@@ -16,11 +16,12 @@ function PropertyCard({ property, favourites = [], toggleFavourite }) {
 
         preview.innerHTML = `
           <strong>${property.bedrooms} bed ${property.type}</strong><br/>
-          ${property.location}<br/>£i${property.price.toLocaleString()}
+          ${property.location}<br/>
+          £${property.price.toLocaleString()}
         `;
 
         document.body.appendChild(preview);
-
+        
         e.dataTransfer.setDragImage(preview, 100, 20);
 
         setTimeout(() => {
@@ -29,22 +30,22 @@ function PropertyCard({ property, favourites = [], toggleFavourite }) {
       }}
     >
       <div className="propertyCard">
-        <img src={property.picture} alt={property.type} />
 
-        <h2>
-          {property.bedrooms} bedroom {property.type}
-        </h2>
+        <Link to={`/property/${property.id}`} className="propertyLink">
+          <h3>{property.location}</h3>
 
-        <p>{property.description}</p>
+          <img src={property.picture} alt={property.type} className="propertyImage" />
 
-        <h3>
-          {property.added.day}th of {property.added.month}{" "}
-          {property.added.year}
-        </h3>
+          <h2>{property.bedrooms} bedroom {property.type}</h2>
 
-        <h3>{property.location}</h3>
+          <p>{property.description}</p>
 
-        <h3>£{property.price.toLocaleString()}</h3>
+          <h3>{property.added.day}th of {property.added.month} {property.added.year}</h3>
+
+          
+
+          <h3>£{property.price.toLocaleString()}</h3>
+        </Link>
 
         <button
           className={`formButton favouriteButton ${
