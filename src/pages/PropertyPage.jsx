@@ -11,6 +11,7 @@ function PropertyPage() {
   return (
     <div> 
       <title>Property page</title>
+      <link rel="icon" type="image/svg+xml" href="/propertyIcon.svg" />
       <h1 className="propertyLocation">{property.location}</h1>
 
       <div className="propertyPageContainer">
@@ -18,7 +19,7 @@ function PropertyPage() {
         <img src={property.picture} alt={property.type } className="propertyImage"/>
 
         <h2 className="propertyInfo">{property.bedrooms} bedroom {property.type}</h2>
-    
+
         <p className="propertyDes">{property.description}</p> 
 
         <h2 className="propertyInfo">£{property.price.toLocaleString()}</h2>

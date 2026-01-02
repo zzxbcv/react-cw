@@ -73,12 +73,11 @@ p{
 }
 
 .propertyImage{
-  max-height: 350px;
-  width: auto;
+  height: auto;
+  width: 680px;
   border-radius: 15px;
   border: 5px solid rgba(255, 255, 255, 1);
   margin: 20px;
-  align-items: center;
 }
 
 .propertyInfo{
@@ -240,6 +239,7 @@ p{
   margin-top: auto;
   padding: 20px;
   border-radius: 0 0 15px 15px;
+  width: 100%;
 }
 
 .favouritesContainer {
@@ -332,6 +332,30 @@ p{
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
+@media (max-width: 1135px){
+  .propertyImage{
+    width: 590px;
+  }
+}
+
+@media (max-width: 1025px){
+  .propertyImage{
+    width: 490px;
+  }
+}
+
+@media (max-width: 925px){
+  .propertyImage{
+    width: 390px;
+  }
+}
+
+@media (max-width: 825px){
+  .propertyImage{
+    width: 290px;
+  }
+}
+
 @media (max-width: 780px){
   .titleBar{
     text-align: center;
@@ -378,11 +402,27 @@ p{
    .sidebar .favouritesContainer {
     display: none;
   }
+
+  .propertyImage{
+    width: 620px;
+  }
+}
+
+@media (max-width: 740px){
+  .propertyImage{
+    width: 520px;
+  }
 }
 
 @media (max-width: 690px){
   .titleBar{
     font-size: 2.5em;
+  }
+}
+
+@media (max-width: 640px){
+  .propertyImage{
+    width: 420px;
   }
 }
 
@@ -396,11 +436,20 @@ p{
   .titleBar{
     font-size: 2.1em;
   }
+  .propertyImage{
+    width: 420px;
+  }
 }
 
 @media (max-width: 485px){
   .titleBar{
     font-size: 1.89em;
+  }
+}
+
+@media (max-width: 440px){
+  .propertyImage{
+    width: 320px;
   }
 }
 
@@ -452,6 +501,13 @@ p{
   }
 }
 
+@media (max-width: 440px){
+  .propertyImage{
+    width: 320px;
+  }
+}
+
+
 @media (max-width: 415px){
   .titleBar{
     font-size: 1.7em;
@@ -461,6 +517,7 @@ p{
 @media (max-width: 400px){
   .titleBar{
     font-size: 1.62em;
+    width: 100%;
   }
 }
 
@@ -469,3 +526,10 @@ p{
     font-size: 1.58em;
   }
 }
+
+@media (max-width: 375px){
+  .propertyImage{
+    width: 285px;
+  }
+}
+

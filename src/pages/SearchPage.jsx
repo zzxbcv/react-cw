@@ -86,6 +86,8 @@ function SearchPage() {
   return (
     <div>
       <title>Search page</title>
+      <link rel="icon" type="image/svg+xml" href="/searchIcon.svg" />
+
       <h1 className="titleBar">Property Search in Bromley</h1>
 
       <button
