@@ -88,7 +88,7 @@ function SearchPage() {
       <title>Search page</title>
       <link rel="icon" type="image/svg+xml" href="/searchIcon.svg" />
 
-      <h1 className="titleBar">Property Search in Bromley</h1>
+      <h1 className="titleBar">Property Search in London</h1>
 
       <button
         className="hamburgerButton"
